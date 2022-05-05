@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contador</title>
+  </head>
+
+  <body>
+      <h1>Contador</h1>
+      <p>Número: <span id="number">0</span></p>
+      <button onclick="increment(1)" class="button button-blue">Incrementar 1</button>
+      <button onclick="increment(10)" class="button button-yellow">Incrementar 10</button>
+      <button onclick="increment(100)" class="button button-red">Incrementar 100</button>
+  </body>
+
+  <script>
+    function increment(numberToIncrement) {
+      const element = document.getElementById('number')
+      element.innerHTML = parseInt(element.innerHTML) + numberToIncrement
+    }
+  </script>
+
+  <style>
+    .button {
+      color: white;
+      border: 0;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      transition: background-color .5s ease;
+    }
+
+    .button:hover {
+      cursor: pointer;
+    }
+
+    .button-blue {
+      background-color: rgba(32, 152, 209, .8);
+    }
+
+    .button-blue:hover {
+      background-color: rgba(32, 152, 209, 1);
+    }
+
+    .button-yellow {
+      background-color: rgba(232, 145, 13, .8);
+    }
+
+    .button-yellow:hover {
+      background-color: rgba(232, 145, 13, 1);
+    }
+
+    .button-red {
+      background-color: rgb(237, 86, 80, .8);
+    }
+
+    .button-red:hover {
+      background-color: rgb(237, 86, 80, 1);
+    }
+  </style>
+</html>
